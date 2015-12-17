@@ -1,0 +1,68 @@
+{
+  "output": {
+    "cpe": [
+      {
+        "cpeName": "BLRQA2-CPE1",
+        "location": "BLR:QA2",
+        "publicIp": "106.51.227.254",
+        "cpeSiteUpDownStatus": "SITE_UP",
+        "lastSiteUpTimeStamp": "Wed 16 Dec 2015 18:03:57 GMT",
+        "lastSiteDownTimeStamp": "Wed 16 Dec 2015 18:03:04 GMT",
+        "cpeRootDir": "/usr/local/ica",
+        "dir": [
+          {
+            "fullPath": "/usr/local/ica/disk1_part1/src",
+            "hasFiles": false,
+            "isEmpty": false,
+            "modtime": "1450289872",
+            "dirContent": [
+              {
+                "contentName": "disp1",
+                "contentType": "DIR",
+                "relativePath": "/disp1",
+                "spaceAvailable": 757336428544,
+                "link": false
+              },
+              {
+                "contentName": "300M_testionos",
+                "contentType": "FILE",
+                "relativePath": "300M_testionos",
+                "totalSize": 314572800
+              },
+              {
+                "contentName": "100M_testionos",
+                "contentType": "FILE",
+                "relativePath": "100M_testionos",
+                "totalSize": 104857600
+              },
+              {
+                "contentName": "10G_testionos",
+                "contentType": "FILE",
+                "relativePath": "10G_testionos",
+                "totalSize": 10737418240
+              },
+              {
+                "contentName": "2G_testionos",
+                "contentType": "FILE",
+                "relativePath": "2G_testionos",
+                "totalSize": 2147483648
+              },
+              {
+                "contentName": "5G_testionos",
+                "contentType": "FILE",
+                "relativePath": "5G_testionos",
+                "totalSize": 5368709120
+              },
+              {
+                "contentName": "1G_testionos",
+                "contentType": "FILE",
+                "relativePath": "1G_testionos",
+                "totalSize": 1073741824
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

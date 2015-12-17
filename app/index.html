@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sfbApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Simple File Browser</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Tree Control -->
+    <link href="angular-tree-control/css/tree-control.css" rel="stylesheet">
+    <link href="angular-tree-control/css/tree-control-attribute.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-controller="AppCtrl">
+    <h1 ng-bind="appName">Simple File Browser</h1>
+    <div class="container-fluid">
+	    <div class="row">
+	    	<div class="col-md-4 tree-holder">
+	    		<div class="panel panel-default">
+	    			<div class="panel-heading">
+	    				File Browser
+	    				<input type='text' class="form-control form-control-inline input-sm pull-right" ng-model="dirSearchKey" placeholder="Search Directories..."/>
+	    			</div>
+	    			<div class="panel-body">
+						<treecontrol
+						   tree-model="dirData"
+						   options="treeOptions"
+						   on-selection="showSelected(node, selected)"
+						   expanded-nodes="expandedNodes"
+						   filter-expression="dirSearchKey"
+						   selected-node="selectedDir">
+						   <span class="glyphicon glyphicon-folder-open"></span>
+						   {{node.Content | extractName}} 
+						</treecontrol>
+						<p class="bg-warning text-danger" ng-show="(dirData|filter:dirSearchKey).length===0">
+							Please refine your search to view directories.
+						</p>
+					</div>
+				</div>
+	    	</div>
+	    	<div class="col-md-8">
+	    		<div class="panel panel-default">
+	    			<div class="panel-heading">
+	    				Files
+	    				<input type="text" class="form-control form-control-inline input-sm pull-right" ng-model="fileSearchKey" placeholder="Search Files..."/>
+	    			</div>
+					<div class="panel-body file-viewer tiles">
+						<div ng-repeat="file in filteredFiles = (files|filter:fileSearchKey)" ng-show="selectedDir" on="file.contentType" ng-switch="" ng-click="toggleSelection(file)" ng-class="{'selected' : file.selected}">
+							<span class="glyphicon glyphicon-folder-close" ng-switch-when="DIR"></span>
+							<span class="glyphicon glyphicon-file" ng-switch-when="FILE"></span>
+							{{file.contentName|fileName}}
+						</div>
+						<p class="bg-warning text-danger" ng-hide="selectedDir">
+							Please select a directory to view the files.
+						</p>
+						<p class="bg-warning text-danger" ng-show="filteredFiles.length===0">
+							Please refine your search to view files.
+						</p>
+					</div>
+	    		</div>
+	    	</div>
+	    </div>
+    </div>
+    <script src="angular/angular.min.js"></script>
+    <script src="angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="angular-tree-control/angular-tree-control.js"></script>
+
+    <!-- Application files -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/filters.js"></script>
+
+  </body>
+</html>

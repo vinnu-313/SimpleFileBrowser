@@ -1,0 +1,16 @@
+{
+  "name": "simple-file-browser",
+  "version": "1.0.0",
+  "description": "A simple file browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vinnu_313",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-ng-annotate": "^1.1.0"
+  }
+}

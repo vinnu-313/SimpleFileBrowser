@@ -1,0 +1,35 @@
+treecontrol>ul>li.tree-li{
+	border: none;
+}
+
+.form-control-inline{
+    display: inline;
+    min-width: 0;
+    width: auto;
+    margin: 0;
+}
+.tree-li{
+	border-left: 1px solid #ddd;
+	padding-left: 10px;
+}
+
+.tree-selected, .selected{
+	background: lightblue;
+	font-weight: bolder;
+}
+
+.file-viewer.tiles > div {
+	display: inline;
+	float: left;
+/* 	border: 1px solid #000; */
+	margin: 10px;
+	width: 100px;
+	text-align: center;
+	padding: 15px 10px 15px;
+	cursor: pointer;
+}
+
+.file-viewer.tiles > div > span{
+	display: block;
+	font-size: 2.5em;
+}

@@ -1,0 +1,60 @@
+[{
+  "Content": "/usr/local/ica",
+  "Nodes": [
+    {
+      "Content": "/usr/local/ica/disk1_part1",
+      "Nodes": [
+        {
+          "Content": "/usr/local/ica/disk1_part1/dst",
+          "Nodes": [
+            
+          ],
+          "link": "false",
+          "space": "705.32 GB",
+          "hasFiles": "true"
+        },
+        {
+          "Content": "/usr/local/ica/disk1_part1/src",
+          "Nodes": [
+            {
+              "Content": "/usr/local/ica/disk1_part1/src/disp1",
+              "Nodes": [
+                
+              ],
+              "link": "false",
+              "space": "705.32 GB",
+              "hasFiles": "false"
+            }
+          ],
+          "link": "false",
+          "space": "705.32 GB",
+          "hasFiles": "true"
+        },
+        {
+          "Content": "/usr/local/ica/disk1_part1/disp1",
+          "Nodes": [
+            
+          ],
+          "link": "false",
+          "space": "705.32 GB",
+          "hasFiles": "false"
+        }
+      ],
+      "link": "true",
+      "space": "705.32 GB",
+      "hasFiles": "false"
+    },
+    {
+      "Content": "/usr/local/ica/external",
+      "Nodes": [
+        
+      ],
+      "link": "false",
+      "space": "434.77 MB",
+      "hasFiles": "false"
+    }
+  ],
+  "link": "false",
+  "space": "434.77 MB",
+  "hasFiles": "false"
+}]
